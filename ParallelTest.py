@@ -9,8 +9,8 @@ class ParallelTest(unittest.TestCase):
     
     def setUp(self):
         # Need to check the http return code here...
-        self.driver = webdriver.Firefox()
-        #self.driver = webdriver.Chrome()
+        #self.driver = webdriver.Firefox()
+        self.driver = webdriver.Chrome()
 
         self.driver.implicitly_wait(20)
         self.driver.set_page_load_timeout(30)
