@@ -5,7 +5,6 @@ from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
 from selenium.webdriver.support import expected_conditions as EC # available since 2.26.0
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
-from django.utils.encoding import smart_str, smart_unicode
 
 import time
 import unittest
@@ -20,6 +19,7 @@ class ParallelTests(ParallelTest):
     #
     #    This one runs an Openfoam analysis
     #
+    @unittest.skip("temporarily disabled - NEED BETTER DATA")
     def test2_OpenFOAMCaseRunner(self):
         try:
             element = WebDriverWait(self.driver, 20).until(EC.frame_to_be_available_and_switch_to_it("contentIframe"))
