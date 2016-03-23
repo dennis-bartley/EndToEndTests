@@ -5,7 +5,6 @@ from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
 from selenium.webdriver.support import expected_conditions as EC # available since 2.26.0
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
-from django.utils.encoding import smart_str, smart_unicode
 
 import time
 import unittest
